@@ -1,0 +1,4 @@
+name: tradixhunter
+owner: burhanjepara41
+package: wasmer/hello@^0.1.3
+kind: wasmer.io/App.v0

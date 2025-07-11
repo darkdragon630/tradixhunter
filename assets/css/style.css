@@ -1,0 +1,110 @@
+/* ========== Global Reset & Font ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;      /* Tidak bisa scroll */
+  touch-action: manipulation;
+  overscroll-behavior: none;
+  -webkit-tap-highlight-color: transparent; /* Hilangkan highlight saat klik */
+  user-select: none;     /* Tidak bisa seleksi teks */
+}
+
+
+/* ========== Layout & Responsif Dasar ========== */
+.container {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* ========== Komponen Card Umum ========== */
+.card {
+  background-color: #B35A1B;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem;
+}
+
+/* ========== Tombol Umum ========== */
+.button {
+  background-color: #F9B233;
+  color: #7A3B0E;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+  background-color: #f7c14a;
+}
+
+/* ========== Avatar dan User Info ========== */
+.avatar-small {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #7A3B0E;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ========== Judul & Header Text ========== */
+.title-main {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 2rem;
+  color: #F9B233;
+  text-shadow: 2px 2px 0 #7A3B0E;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* ========== Grid Wilayah / Kartu ========== */
+.grid-map {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+/* ========== Responsive Mobile Specific ========== */
+@media (max-width: 480px) {
+  .title-main {
+    font-size: 1.75rem;
+  }
+
+  .button {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .grid-map {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 600px;
+  }
+}
